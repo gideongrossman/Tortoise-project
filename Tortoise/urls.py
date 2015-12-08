@@ -19,5 +19,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^turtleshell/', include('turtle_shell.urls')),
+    url(r'^turtle_shell/', include('turtle_shell.urls')),
 ]
