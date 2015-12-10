@@ -18,7 +18,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', include('turtle_shell.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^turtle_shell/', include('turtle_shell.urls')),
+    url(r'^turtle_shell/', include('turtle_shell.urls', namespace="turtle_shell")),
 ]
