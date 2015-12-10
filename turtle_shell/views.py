@@ -20,7 +20,9 @@ def get_name(request):
         # check whether it's valid:
         if form.is_valid():
             species = form.cleaned_data['animal_species']
-            animal = Animal(animal_species = species)
+            #image = form.cleaned_data['animal_document']
+            email = form.cleaned_data['email']
+            animal = Animal(animal_species = species, animal_email=email)
             animal.save()
             
             # process the data in form.cleaned_data as required

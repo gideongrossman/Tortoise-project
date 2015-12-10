@@ -5,7 +5,8 @@ from models import Animal
 class AnimalAdmin(admin.ModelAdmin):
     fieldsets = [
     (None, {'fields': ['animal_species']}),
-    ('The document', {'fields':['document']})
+    #('The document', {'fields':['document']})
+    (None, {'fields':['animal_email']})
     ]
     search_fields=['animal_species']
     

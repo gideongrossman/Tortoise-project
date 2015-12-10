@@ -11,3 +11,5 @@ class ContactForm(forms.Form):
     
 class AnimalForm(forms.Form):
     animal_species = forms.CharField(max_length=100)
+    #animal_document = forms.EmailField()
+    email = forms.EmailField()
