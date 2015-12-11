@@ -16,14 +16,11 @@ def get_name(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        form = AnimalForm(request.POST)
+        form = AnimalForm(request.POST, request.FILES)
         # check whether it's valid:
         if form.is_valid():
-            species = form.cleaned_data['animal_species']
-            image = form.cleaned_data['image']
-            email = form.cleaned_data['email']
-            animal = Animal(animal_species = species, animal_email=email, animal_image=image)
-            animal.save()
+            newAnimal = Animal(animal_image = request.FILES['animal_image'])
+            newAnimal.save()
             
             # process the data in form.cleaned_data as required
             # ...
