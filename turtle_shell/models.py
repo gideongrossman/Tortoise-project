@@ -7,7 +7,7 @@ from django.db import models
 
 class Animal(models.Model):
     animal_species = models.CharField(max_length=200)
-    #document = models.ImageField(upload_to='documents')
+    animal_image = models.ImageField(upload_to='documents', null=True)
     animal_email = models.EmailField(null=True)
     
     def __str__(self):
