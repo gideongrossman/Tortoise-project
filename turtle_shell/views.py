@@ -11,6 +11,9 @@ def index(request):
     
 def animal(request):
     return render(request, 'turtle_shell/people_index.html')
+
+def list(request):
+    return render(request, 'turtle_shell/list.html', {'animals':Animal.objects.all()})
     
 def get_name(request):
     # if this is a POST request we need to process the form data
@@ -19,7 +22,7 @@ def get_name(request):
         form = AnimalForm(request.POST, request.FILES)
         # check whether it's valid:
         if form.is_valid():
-            newAnimal = Animal(animal_image = request.FILES['animal_image'])
+            newAnimal = Animal(animal_species = request.POST['animal_species'], animal_image = request.FILES['animal_image'])
             newAnimal.save()
             
             # process the data in form.cleaned_data as required
@@ -35,7 +38,7 @@ def get_name(request):
             #    
             #send_mail(subject, message, sender, recipients)
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('turtle_shell:thanks'))
+            return HttpResponseRedirect(reverse('turtle_shell:list_animals'))
 
     # if a GET (or any other method) we'll create a blank form
     else:

@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'^animal/$', views.animal, name='person'),
     url(r'^fileupload/$', views.get_name, name='get_name'),
     url(r'^thanks/$', views.thanks, name = 'thanks'),
+    url(r'^list/$', views.list, name = 'list_animals'),
 ]

@@ -1,0 +1,14 @@
+<head>
+	animal list
+</head>
+
+<body>
+	<!-- List of uploaded animals -->
+	{% if animals %}
+		{% for animal in animals %}
+			<li>{{animal.animal_species}}</li>
+		{% endfor %}
+	{% else %}
+		<p>No images.</p>
+	{% endif %}
+</body>
