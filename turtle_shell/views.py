@@ -39,7 +39,7 @@ def get_name(request):
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        form = NameForm()
+        form = AnimalForm()
 
     return render(request, 'turtle_shell/name.html', {'form': form})
     

@@ -19,4 +19,4 @@ class ContactForm(forms.Form):
 class AnimalForm(ModelForm):
     class Meta:
         model = Animal
-        fields = ['animal_species', 'animal_image', 'animal_email']
+        fields = ['animal_species', 'animal_image']

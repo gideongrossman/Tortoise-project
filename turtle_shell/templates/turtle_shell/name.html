@@ -1,5 +1,6 @@
 <form action= "{% url 'turtle_shell:get_name' %}" method="post">
     {% csrf_token %}
-    {{ form }}
+    <h1>Animal Species: {{ form.animal_species }}</h1>
+	<h1>Image: {{form.animal_image}}</h1>
     <input type="submit" value="Submit" />
 </form>
