@@ -24,20 +24,6 @@ def get_name(request):
         if form.is_valid():
             newAnimal = Animal(animal_species = request.POST['animal_species'], animal_image = request.FILES['animal_image'])
             newAnimal.save()
-            
-            # process the data in form.cleaned_data as required
-            # ...
-            #subject = form.cleaned_data['subject']
-            #message = form.cleaned_data['message']
-            #sender = form.cleaned_data['sender']
-            #cc_myself = form.cleaned_data['cc_myself']
-            #
-            #recipients = ['gideon@velocitek.com']
-            #if cc_myself:
-            #    recipients.append(sender)
-            #    
-            #send_mail(subject, message, sender, recipients)
-            # redirect to a new URL:
             return HttpResponseRedirect(reverse('turtle_shell:list_animals'))
 
     # if a GET (or any other method) we'll create a blank form
