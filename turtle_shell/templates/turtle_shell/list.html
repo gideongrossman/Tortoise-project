@@ -7,7 +7,9 @@
 	{% if animals %}
 		{% for animal in animals %}
 			<li>{{animal.animal_species}}</li>
-			<li><a href="{{ animal.animal_image.url }}">{{ animal.animal_image.name}}
+			{% if animal.animal_image %}
+				<li><a href="{{ animal.animal_image.url }}">{{ animal.animal_image.name}}
+			{% endif %}
 		{% endfor %}
 	{% else %}
 		<p>No images.</p>
