@@ -7,7 +7,8 @@ from .models import Animal
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the turtle_shell index.")
+    return render(request, 'turtle_shell/index_page.html')
+    #return HttpResponse("Hello, world. You're at the turtle_shell index.")
     
 def animal(request):
     return render(request, 'turtle_shell/people_index.html')
