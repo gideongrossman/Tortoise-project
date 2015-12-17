@@ -22,4 +22,5 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^turtle_shell/', include('turtle_shell.urls', namespace="turtle_shell")),
+    url(r'^phone/', include('phoneFunctions.urls', namespace="phoneFunctions")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
