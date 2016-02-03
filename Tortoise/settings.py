@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#AWS_ keys
+AWS_SECRET_ACCESS_KEY = '8V5ueZAHV/OdYolxicF3zqb30Ba8WZkPnOOO5ech'
+AWS_ACCESS_KEY_ID = 'AKIAJ5MFWTJ4A27BMACA'
+AWS_STORAGE_BUCKET_NAME = 'tortoise.app'
+
+S3DIRECT_REGION = 'us-west-1'
 
 # Application definition
 
@@ -39,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'turtle_shell',
     'phoneFunctions',
+    's3direct',
 ]
 
 MIDDLEWARE_CLASSES = [
